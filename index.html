@@ -1,303 +1,318 @@
 <!DOCTYPE html>
-<html lang="zh-ch">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>基本样式页</title>
-	<link rel="stylesheet" type="text/css" href="css/layout.css">
-	<link rel="stylesheet" type="text/css" href="css/base.css">
-	<link rel="stylesheet" type="text/css" href="css/ui-component.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="Resource-type" content="Document">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/canvas.js"></script>
+    <script type="text/javascript" src="js/jquery.imgpreload.min.js"></script>
+
+
+
+    <title>摇摇无期</title>
+
+
 </head>
 <body>
-	<div id="top" class="top">
-		<div class="wrap">
-			<p class="call">010-114/116114电话预约</p>
-			<p class="welcome">欢迎来到城市预约挂号统一平台&nbsp;请&nbsp;
-			<a href="#1">登录</a>
-			<a href="#2">注册</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#3">帮助中心</a>
-			</p>
-		</div>
-	</div>
-	<div id="header" class="header">
-		<div class="wrap">
-			<a href="#4" class="logo"><img src="img/logo.png"></a>
-			<div class="search ui-search">
-				<div class="ui-search-selected">医院</div>
-				<div class="ui-search-select-list" >
-					<a href="#">科室</a>
-					<a href="#">疾病</a>
-					<a href="#">医院</a>
-				</div>
-				<input type="text" name="" class="ui-search-input" placeholder="请输入搜索内容" />
-				<a href="#" class="ui-search-submit">&nbsp;</a>
-			</div>
-		</div>
-	</div>
-	<div id="nav" class="nav">
-		<div class="wrap">
-			<div href="#6" class="link menu">全部科室
-				<div class="menu-list ui-menu">
 
-					<div class="ui-menu-item clearfix">
-						
-						<a href="#1" class="ui-menu-item-department">内科</i> 
-						<a href="#2" class="ui-menu-item-disease">高血压</a>
-						<a href="#3" class="ui-menu-item-disease">冠心病</a>
+    <div class="loading" style="display: block">
+        <p>加载中...</p>
+    </div>
+    <div class="wrap" style="display:none ">
+        <div class="audio-controls">
+            <img class="audio-button" src="img/music.png" >
+        </div>
+        <audio style="display: none" src="music/music.mp3" class="audio-music" preload="autoplay" controls loop></audio>
+        <audio style="display: none" src="music/yao.mp3" class="yao-music" preload="autoplay" controls ></audio>
+        <div class="all-page">
+            <div class="bg-animate animate1" style="display: block">
+                <img src="img/B1.png">
+                <img src="img/B2.png">
+                <img src="img/B3.png">
 
-						<div class="ui-menu-item-detail" >
-							<div class="ui-menu-item-detail-group">
-								<div class="ui-menu-item-detail-group-caption">内科</div>
+                <img src="img/B1.png">
+                <img src="img/B2.png">
+                <img src="img/B3.png">
 
-									<div class="ui-menu-item-detail-group-list">
-										<a href="#1">心血管内科</a>
-										<a href="#1">神经内科</a>
-										<a href="#1">内分泌科</a>
-										<a href="#1">血液科</a>
-										<a href="#1">心血管内科</a>
-										<a href="#1">神经内科</a>
-										<a href="#1">内分泌科</a>
-										<a href="#1">血液科</a>
-										<a href="#1">心血管内科</a>
-										<a href="#1">神经内科</a>
-										<a href="#1">内分泌科</a>
-										<a href="#1">血液科</a>
-										<a href="#1">内分泌科</a>
-										<a href="#1">血液科</a>
-									</div>
+            </div>
+            <div class="section section1"  style="display: block">
+                <img class="bg1" src="img/bg1.jpg">
+                <div class="content">
+                    <img src="img/car2.png" class="car2">
+                    <img class="y3" src="img/y3.png">
+                    <img class="y2" src="img/y2.png">
+                    <img class="y2a" src="img/y2.png">
+                    <img class="p1-1" src="img/p1-1.png">
+                    <img class="p1-2" src="img/p1-2.png">
+                    <!-- <img class='logo' src='img/logo.png'> -->
+                </div>
 
-							</div>
-						</div>
+            </div>
+            <div class="page page1"style="display: none">
+                <div class="a1-2">
+                    <div class="a1-2a"></div>
+                </div>
+                <img class="a1-4" src="img/a1-4.png">
+                <img class="a1-3" src="img/a1-3.png">
+                <img class="a1-1" src="img/a1-1.png">
+                <img class="btn" src="img/btn.png">
+            </div>
+            <div class="page page2" style="display: none">
+                <div class="a2-2">
+                    <div class="a2-2a"></div>
+                </div>
+                <img class="a1-4" src="img/a2-4.png">
+                <img class="a2-3" src="img/a2-3.png">
+                <img class="a2-1" src="img/a2-1.png">
+                <img class="btn" src="img/btn.png">
+            </div>
+            <div class="page page3" style="display: none">
+                <div class="a3-2">
+                    <div class="a3-2a"></div>
+                </div>
+                <img class="a3-4" src="img/a3-4.png">
+                <img class="a3-3" src="img/a3-3.png">
+                <img class="a3-1" src="img/a3-1.png">
+                <img class="a3-5" src="img/a3-5.png">
+                <img class="a3-6" src="img/a3-6.png">
+                <img class="btn" src="img/btn.png">
+            </div>
+            <div class="page page4" style="display: none">
+                <div class="a4-2">
+                    <div class="a4-2a"></div>
+                </div>
+                <img class="a5-4" src="img/a4-4.png">
+                <img class="a4-3" src="img/a4-3.png">
+                <img class="a4-1" src="img/a4-1.png">
+                <img class="btn btn1" src="img/btn.png">
+            </div>
+            <div class="page page5" style="display: none">
+                <img class="a5-6" src="img/a5-6.png">
+                <img class="a5-5" src="img/a5-5.png">
+                <img class="a4-4" src="img/a5-4.png">
+                <div class="a5-2">
+                    <div class="a5-2a"></div>
+                </div>
+                <img class="a5-3" src="img/a5-3.png">
+                <img class="a5-1" src="img/a5-1.png">
+                <img class="btn btn1" src="img/btn.png">
+            </div>
+            <div class="page page6" style="display: none">
+                <div class="a6-2">
+                    <div class="a6-2a"></div>
+                </div>
+                <img class="a5-4" src="img/a6-4.png">
+                <img class="a6-1" src="img/a6-1.png">
+                <img class="btn" src="img/btn.png">
+            </div>
+            <div class="page page7" style="display: none">
+                <div class="a7-2">
+                    <div class="a7-2a"></div>
+                </div>
+                <img class="a7-4" src="img/a7-4.png">
+                <img class="a7-1" src="img/a7-1.png">
+                <img class="btn btn1" src="img/btn.png">
+            </div>
+            <div class="bg-animate animate2" style="display:none ; left: -15px;">
+                <img src="img/B4.png">
+                <img src="img/B4.png">
+                <img src="img/B4.png">
 
-					</div>
+                <img src="img/B4.png">
+                <img src="img/B4.png">
+                <img src="img/B4.png">
+
+            </div>
+            <div class="section section2" style="display:none ">
+
+                <img class="bg2" src="img/bg2.jpg">
+                <div class="content">
+                    <img class="logo" src="img/logo.png">
+                    <img src="img/car2.png" class="car2">
+                    <img src="img/y1.png" class="y1">
+                    <img class="p2-1" src="img/p2-1.png">
+                    <img class="an1-1" src="img/an1-1.png">
+                    <img class="an1-2" src="img/an1-2.png">
+                </div>
+            </div>
+            <div class="section section3" style="display: none">
+                <img class="bg2" src="img/bg2.jpg">
+                <div class="content">
+                    <img class="logo" src="img/logo.png">
+                    <img src="img/car2.png" class="car2">
+                    <img src="img/y1.png" class="y1">
+                    <img class="p3-1" src="img/p3-1.png">
+                    <img class="an2-1a an3" src="img/an2-1.png">
+                    <img class="an2-2a an3" src="img/an2-2.png">
+                </div>
+            </div>
+            <div class="section section4" style="display: none">
+                <img class="bg2" src="img/bg2.jpg">
+                <div class="content">
+                    <img class="logo" src="img/logo.png">
+                    <img src="img/car2.png" class="car2">
+                    <img src="img/y1.png" class="y1">
+                    <img class="p4-1" src="img/p4-1.png">
+                    <img class="an3-1" src="img/an3-1.png">
+                    <img class="an3-2" src="img/an3-2.png">
+                </div>
+            </div>
+            <div class="section section5" style="display: none">
+                <img class="bg2" src="img/bg2.jpg">
+                <div class="content">
+                    <img class="logo" src="img/logo.png">
+                    <img src="img/car2.png" class="car2">
+                    <img src="img/y1.png" class="y1">
+                    <img class="p5-1" src="img/p5-1.png">
+                    <img class="an2-1b an2" src="img/an2-1.png">
+                    <img class="an2-2b an2" src="img/an2-2.png">
+                </div>
+            </div>
+            <div class="section section6" style="display: none">
+                <img class="bg2" src="img/bg2.jpg">
+                <div class="content">
+                    <img class="logo" src="img/logo.png">
+                    <img src="img/car2.png" class="car2">
+                    <img src="img/y1.png" class="y1">
+                    <img class="p6-1" src="img/p6-1.png">
+                    <img class="an2-1c" src="img/an2-1.png">
+                    <img class="an2-2c" src="img/an2-2.png">
+                </div>
+            </div>
+            <div class="section section7" style="display: none">
+                <img class="bg2" src="img/bg2.jpg">
+                <div class="content">
+                    <img class="logo" src="img/logo.png">
+                    <img src="img/y1.png" class="y1">
+                    <img class="p7-1" src="img/p7-1.png">
+                    <img class="p7-2" src="img/p7-2.png">
+                    <input class="qi" id="qi" type="number" value="" maxlength="4">
+                    <img src="img/qd_btn.png" class="qd_btn">
+                </div>
+            </div>
+            <div class="section section8" style="display: none">
+                <img src="img/p9-5a.png" class="p9-5">
+                <img src="img/bg3-1.png" class="bg3">
+                <img src="img/p9-2a.png" class="p9-2">
+                <img src="img/p9-3.png" class="p9-3" style="display: none">
+
+                <img src="img/cj_btn.png" class="cj_btn">
+                <img src="img/fx_btn.png" class="fx_btn" >
+                <div class="p9-1">
+                    <p class="wb"><span class="name">沙漠</span>,已摇号<span class="num">15</span>期</p>
+                </div>
+                <div class="shade" id="shade" style="display: none">
+                    <img class="p9-4" src="img/p9-4.png">
+                </div>
+            </div>
+            <div class="section section9" style="display:none">
+                <img class="y3" src="img/y3.png">
+                <img class="y2" src="img/y2.png">
+                <img class="y2a" src="img/y2.png">
+                <img src="img/turnplate-bg.png" class="p-3">
+                <img src="img/001.png" id="001-img" style="display:none;">
+                <img src="img/002.png" id="002-img" style="display:none;">
+                <img src="img/003.png" id="003-img" style="display:none;">
+                <img src="img/004.png" id="004-img" style="display:none;">
+                <img src="img/005.png" id="005-img" style="display:none;">
+                <img src="img/006.png" id="006-img" style="display:none;">
+                <img src="img/007.png" id="007-img" style="display:none;">
+                <img src="img/008.png" id="008-img" style="display:none;">
+                <img src="img/009.png" id="009-img" style="display:none;">
+                <div class="banner">
+                    <div class="turnplate">
+                        <canvas class="item" id="wheelcanvas" width="240px" height="240px"></canvas>
+                        <img class="pointer" id="btn" src="img/turnplate-pointer.png">
+                    </div>
+                </div>
 
 
-					<div class="ui-menu-item clearfix">
-						
-						<a href="#1" class="ui-menu-item-department">外科</i> 
-						<a href="#2" class="ui-menu-item-disease">肾结石</a>
-						<a href="#3" class="ui-menu-item-disease">脑外伤</a>
+                <img class="but1" src="img/but1.png" >
+                <img class="but2" src="img/but2.png" >
+                <img class="gz" src="img/gz.png">
+                <div class="gz1" id="gz1"  style="display:none; z-index:999;"><img src="img/gz1.png"></div>
+                <div class="prize" style="display: none">
+                    <img class="J" src="">
+                    <img class="info" src="img/info.png">
+                    <div class="formUser" method="post" name="formUser" id="formUser" onsubmit="return checkInfo(this);">
 
-						<div class="ui-menu-item-detail" >
+                        <input type="hidden" name="type1" id="type1" value="还没有">
+                        <input type="hidden" name="type2" id="type2" value="">
+                        <input type="hidden" name="type3" id="type3" value="">
 
-							<div class="ui-menu-item-detail-group">
-								<div class="ui-menu-item-detail-group-caption">外科</div>
+                        <input class="ty" type="text" name="name" id="name" value="" maxlength="20" placeholder="请输入姓名">
+                        <input class="ty" type="text" name="phone" id="phone" value="" maxlength="11" placeholder="请输入电话">
+                        <input class="ty" type="text" name="add" id="add" value="" maxlength="40" placeholder="请输入地址">
+                        <input class="ty" type="text" name="email" id="email" value="" maxlength="40" placeholder="请输入邮箱">
+                        <input class="tj" id="tj" type="image" src="img/tj.png" data="">
+                    </div>
+                    <img class="ts" src="img/ts.png">
+                </div>
+            </div>
+            <div class="gz1" id="gz1" style="display: none; z-index: 999;"><img src="img/gz1.png"></div>
+            <div class="cx" id="cx"  style="display: none;"><img src="img/cx.png"></div>
 
-									<div class="ui-menu-item-detail-group-list">
-										<a href="#1">神经外科</a>
-										<a href="#1">功能神经外科</a>
-										<a href="#1">内分泌科</a>
-										<a href="#1">血液科</a>
-										<a href="#1">心血管内科</a>
-										<a href="#1">神经内科</a>
-										<a href="#1">内分泌科</a>
-										<a href="#1">血液科</a>
-										<a href="#1">心血管内科</a>
-										<a href="#1">神经内科</a>
-										<a href="#1">内分泌科</a>
-										<a href="#1">血液科</a>
-										<a href="#1">内分泌科</a>
-										<a href="#1">血液科</a>
-									</div>
-
-							</div>
-							<div class="ui-menu-item-detail-group">
-								<div class="ui-menu-item-detail-group-caption">外科常见疾病</div>
-
-									<div class="ui-menu-item-detail-group-list">
-										<a href="#1">神经外科</a>
-										<a href="#1">功能神经外科</a>
-										<a href="#1">内分泌科</a>
-										<a href="#1">血液科</a>
-										<a href="#1">心血管内科</a>
-										<a href="#1">神经内科</a>
-										<a href="#1">内分泌科</a>
-										<a href="#1">血液科</a>
-										<a href="#1">心血管内科</a>
-										<a href="#1">神经内科</a>
-										<a href="#1">内分泌科</a>
-										<a href="#1">血液科</a>
-										<a href="#1">内分泌科</a>
-										<a href="#1">血液科</a>
-									</div>
-
-							</div>
-							
-						</div>
-
-					</div>
-
-	
+        </div>
 
 
-				</div>
-			</div>
-			<a href="hospitals.html" class="link">按医院挂号</a>
-			<a href="department.html" class="link">按科室挂号</a>
-			<a href="#6" class="link">按疾病挂号</a>
-			<a href="#6" class="link">最新公告</a>
-			<a href="#6" class="link right">社会知名医院</a>
-		</div>
-	</div>
-	<div id="banner" class="banner clearfix">
-		<div class="banner-slider ui-slider">
-			
-			<div class="ui-slider-wrap clearfix">
-				<a href="#" class="item"><img src="img/banner_1.jpg" alt="banner-1"></a>
-				<a href="#" class="item"><img src="img/banner_2.jpg" alt="banner-2"></a>
-				<a href="#" class="item"><img src="img/banner_3.jpg" alt="banner-3"></a>
-			</div>
+    </div>
 
-			<div class="ui-slider-arrow">
-				<a href="#" class="item left">&nbsp;</a>
-				<a href="#" class="item right">&nbsp;</a>
-			</div>
 
-			<div class="ui-slider-process">
-				<a href="#" class="item item_focus">&nbsp;</a>
-				<a href="#" class="item ">&nbsp;</a>
-				<a href="#" class="item ">&nbsp;</a>
-			</div>
-
-		</div>
-		<div class="banner-search">
-			<div class="caption"> <span class="text">快速预约</span> </div>
-			<div class="form ui-cascading">
-				<div class="line"><select name="area"><option>医院地区</option></select></div>
-				<div class="line"><select name="level"><option>医院等级</option></select></div>
-				<div class="line"><select name="name"><option>医院名称</option></select></div>
-				<div class="line"><select name="department"><option>医院科室</option></select></div>
-			</div>
-			<div class="submit">
-				<input type="button" class="button" value="快速查询">
-			</div>
-		</div>
-		<div class="banner-help">
-			<div class="caption"> <span class="text">帮助中心</span> </div>
-			<div class="list">
-				<a href="#7" class="link">账号指南</a>
-				<a href="#7" class="link">预约指南</a>
-				<a href="#7" class="link">账号找回</a>
-				<a href="#7" class="link">常见问题</a>
-			</div>
-		</div>
-	</div>
-	<div id="content" class="content">
-		<div class="wrap clearfix">
-			
-			<div class="content-tab">
-				
-				<div class="caption clearfix">
-					<a href="#7" class="item item_focus">医院</a>
-					<a href="#7" class="item">科室</a>
-				</div>
-
-				<div class="block">
-					<div class="item">
-
-						<div class="block-caption">
-							<a href="#8" class="block-capiton-item block-capiton-item_focus">全部</a>
-							<a href="#8" class="block-capiton-item">全部东城区</a>
-							<a href="#8" class="block-capiton-item">西城区</a>
-							<a href="#8" class="block-capiton-item">朝阳区</a>
-							<a href="#8" class="block-capiton-item">丰台区</a>
-							<a href="#8" class="block-capiton-item">石景山区</a>
-							<a href="#8" class="block-capiton-item">海淀区</a>
-							<a href="#8" class="block-capiton-item">门头沟区</a>
-							<a href="#8" class="block-capiton-item">房山区</a>
-							<a href="#8" class="block-capiton-item">其他</a>
-						</div>
-						
-						<div class="block-wrap"><!--新增的-->
-
-							<div class="block-content">
-
-								<div class="block-list clearfix">
-
-									<div class="item">
-										<img src="img/hospital-1.jpg" alt="xx医院">
-										<div class="item-name">北京协和医院<span class="item-level">【三级甲等】</span></div>
-										<div class="item-phone">电话：东院咨询台:010-69155564..</div>
-										<div class="item-address">电话： [东院]北京市东城区帅府园一号 [西院]北京市西城区大木仓...</div>
-									</div>
-									<div class="item">
-										<img src="img/hospital-1.jpg" alt="xx医院">
-										<div class="item-name">北京协和医院<span class="item-level">【三级甲等】</span></div>
-										<div class="item-phone">电话：东院咨询台:010-69155564..</div>
-										<div class="item-address">电话： [东院]北京市东城区帅府园一号 [西院]北京市西城区大木仓...</div>
-									</div>
-									
-									<div class="item">
-										<img src="img/hospital-1.jpg" alt="xx医院">
-										<div class="item-name">北京协和医院<span class="item-level">【三级甲等】</span></div>
-										<div class="item-phone">电话：东院咨询台:010-69155564..</div>
-										<div class="item-address">电话： [东院]北京市东城区帅府园一号 [西院]北京市西城区大木仓...</div>
-									</div>
-									
-									<div class="item">
-										<img src="img/hospital-1.jpg" alt="xx医院">
-										<div class="item-name">北京协和医院<span class="item-level">【三级甲等】</span></div>
-										<div class="item-phone">电话：东院咨询台:010-69155564..</div>
-										<div class="item-address">电话： [东院]北京市东城区帅府园一号 [西院]北京市西城区大木仓...</div>
-									</div>
-									
-								</div>
-
-								<div class="block-text-list clearfix">
-									<a href="#9" class="item">首都儿科研究所附属儿童医院 <span class="level">【三级甲等】</span></a>
-									<a href="#9" class="item">中国中医科学院望京医院 <span class="level">【三级合格】</span></a>
-									<a href="#9" class="item">首都儿科研究所附属儿童医院 <span class="level">【三级甲等】</span></a>
-									<a href="#9" class="item">中国中医科学院望京医院 <span class="level">【三级合格】</span></a>
-									<a href="#9" class="item">首都儿科研究所附属儿童医院 <span class="level">【三级甲等】</span></a>
-									<a href="#9" class="item">中国中医科学院望京医院 <span class="level">【三级合格】</span></a>
-								</div>
-
-								<a href="#" class="block-more">更多医院</a>
-							</div>
-						</div>
-						<div class="block-wrap" style="display: none;"><!--新增的-->
-							其他城区内容
-						</div>
-
-					</div>
-					<div class="item" style="display: none;">
-						科室内容
-					</div>
-				</div>
-
-			</div>
-			<div class="content-news">
-				<div class="caption"> 最新公告 <a href="#8" class="more">|更多</a> </div>
-				<div class="list">
-					<a href="#8" class="link">阜外医院特需门诊暂停更新号源通...</a>
-					<a href="#8" class="link">防护策略升级通知</a>
-					<a href="#8" class="link">阜外医院特需门诊暂停更新号源通...</a>
-					<a href="#8" class="link">防护策略升级通知</a>
-					<a href="#8" class="link">阜外医院特需门诊暂停更新号源通...</a>
-					<a href="#8" class="link">防护策略升级通知</a>
-				</div>
-			</div>
-			<div class="content-close">
-				<div class="caption"> 停诊公告 <a href="#8" class="more">|更多</a> </div>
-				<div class="list">
-					<a href="#8" class="link">首都医科大学附属北京安贞医院消...</a>
-					<a href="#8" class="link">首都医科大学附属北京安贞医院妇</a>
-					<a href="#8" class="link">北京安贞医院妇</a>
-					<a href="#8" class="link">首都医科大学附属北京安贞医院消...</a>
-					<a href="#8" class="link">首都医科大学附属北京安贞医院妇</a>
-					<a href="#8" class="link">北京安贞医院妇</a>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<div id="footer" class="footer">
-		<div class="wrap">
-			Copyright&nbsp;&copy;&nbsp;2017慕课网版权所有	
-		</div>
-	</div>
-	<a href="#0" class="go-top"></a>
-	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="js/ui.js"></script>
 </body>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    var _mtac = {};
+    (function() {
+        var mta = document.createElement("script");
+        mta.src = "http://pingjs.qq.com/h5/stats.js?v2.0.4";
+        mta.setAttribute("name", "MTAH5");
+        mta.setAttribute("sid", "500342666");
+
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(mta, s);
+    })();
+</script>
+<script>
+    wx.config({
+        appId: 'wx3706fe82cebc4698',
+        timestamp: '1515150410',
+        nonceStr: '0yh7M7jDMPMMAPBl',
+        signature: '87b44b54da36ef07fcf5c3071b1f2e24e49c0572',
+        jsApiList: [
+            'onMenuShareAppMessage',
+            'onMenuShareTimeline'
+        ]
+    });
+
+    wx.ready(function () {
+        wx.onMenuShareAppMessage({
+            title: '摇摇无期',
+            desc: '关于北京摇号，我想说……',
+            link: 'http://htmlpreview.github.io/?https://github.com/153102082/gitskills/blob/features/index.html',
+            imgUrl: 'http://h5.3qkk.com/bqaa/img/fx.jpg',
+            trigger: function (res) {
+            },
+            success: function (res) {
+            }
+        });
+        wx.onMenuShareTimeline({
+            title: '关于北京摇号，我想说……',
+            link: 'http://htmlpreview.github.io/?https://github.com/153102082/gitskills/blob/features/index.html',
+            imgUrl: 'http://h5.3qkk.com/bqaa/img/fx.jpg',
+            trigger: function (res) {
+            },
+            success: function (res) {
+            }
+        });
+    });
+</script>
+
+
+
 </html>
