@@ -2,7 +2,7 @@ var imgNum = 0;
 var images = [];
 function preLoadImg(){
     $.imgpreload([],function (){});
-    images.push('img/bg.jpg','img/bg1.jpg','img/chuan.png','img/d1.gif','img/d2.gif','img/d3.gif','img/d4.gif','img/img-1.png','img/img-2.gif','img/img-3.gif','img/img-4.gif','img/img-5.gif','img/img-6.gif','img/img-7.gif','img/img-8.gif','img/img-9.gif','img/img-10.gif','img/img-11.gif','img/img-12.png','img/img-13.gif','img/img-14.png','img/img-15.gif','img/ship.gif','img/ship1.png','img/yanhuua.gif','img/updown/1.jpg','img/updown/2.jpg','img/updown/3.jpg','img/updown/4.jpg','img/updown/5.jpg','img/updown/6.jpg','img/updown/7.jpg','img/updown/8.jpg','img/updown/9.jpg','img/updown/10.jpg','img/updown/11.jpg','img/updown/12.jpg','img/updown/13.jpg'  );
+    images.push('img/bg.jpg','img/bg1.jpg','img/chuan.png','img/d1.gif','img/d2.gif','img/d3.gif','img/d4.gif','img/img-1.png','img/img-2.gif','img/img-3.gif','img/img-4.gif','img/img-5.gif','img/img-6.gif','img/img-7.gif','img/img-8.gif','img/img-9.gif','img/img-10.gif','img/img-11.gif','img/img-12.png','img/img-13.gif','img/img-14.png','img/img-15.gif','img/ship.gif','img/ship1.png','img/yanhuua.gif','img/updown/1.jpg','img/updown/2.jpg','img/updown/3.jpg','img/updown/4.jpg','img/updown/5.jpg','img/updown/6.jpg','img/updown/7.jpg','img/updown/8.jpg','img/updown/9.jpg','img/updown/10.jpg','img/updown/11.jpg','img/updown/12.jpg','img/updown/13.jpg' ,'js/index.js','js/jquery.imgpreload.min.js','js/jquery-1.7.1.min.js','style/style.css' );
     $.imgpreload(images,{
         each: function () {
             var status = $(this).data('loaded') ? 'success' : 'error';
@@ -144,33 +144,11 @@ var timeOutEvent=0;
         preLoadImg();
 
 
-                var pressmove = false;
-                var ismove = false;
-                var user_stop = true;
-        stage = new createjs.Stage("anime_canvas");//舞台
-        createjs.Touch.enable(stage);//touch设备支持
-        console.log(stage);
-
-                stage.addEventListener('mousedown', function(e) {
-                    console.log("a");
-                    timeOutEvent = setTimeout("longPress()",500);
-                    e.preventDefault();
-                }, false);
-                stage.addEventListener('pressup', function(e) {
-                    console.log("b");
-                    clearTimeout(timeOutEvent);
-                    if(time1){
-                        clearInterval(time1);
-                        $(".ship1").css("display","block");
-                        $(".ship2").css("display","none");
-                    }
-
-                    if(timeOutEvent!=0){
-                        // alert("你这是点击，不是长按");
-                    }
-                    return false;
-
-                }, false);
+        $("body").on({
+            touchstart: function(e){
+                e.preventDefault();
+            }
+        });
 
 
         $(".wrap-ship").on({
@@ -240,4 +218,31 @@ var timeOutEvent=0;
 
 
 
+/*
+               var pressmove = false;
+               var ismove = false;
+               var user_stop = true;
+       stage = new createjs.Stage("anime_canvas");//舞台
+       createjs.Touch.enable(stage);//touch设备支持
+       console.log(stage);
 
+               stage.addEventListener('mousedown', function(e) {
+                   console.log("a");
+                   timeOutEvent = setTimeout("longPress()",500);
+                   e.preventDefault();
+               }, false);
+               stage.addEventListener('pressup', function(e) {
+                   console.log("b");
+                   clearTimeout(timeOutEvent);
+                   if(time1){
+                       clearInterval(time1);
+                       $(".ship1").css("display","block");
+                       $(".ship2").css("display","none");
+                   }
+
+                   if(timeOutEvent!=0){
+                       // alert("你这是点击，不是长按");
+                   }
+                   return false;
+
+               }, false);*/

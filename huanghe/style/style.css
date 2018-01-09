@@ -5,14 +5,7 @@ margin:0;
 body .wrap{
     overflow: hidden;
 }
-.btn{
 
-z-index: 90;
-background: #aaa;
-    position: fixed;
-    opacity:.0.5;
-    z-index: 90;
-}
 .wrap {
     color:#aaadc4;
     width: 100vw;
