@@ -137,36 +137,43 @@ function move(){
 
 
   }
-
+var stage='';
 
 var timeOutEvent=0;
     $(function(){
         preLoadImg();
 
-        /*
+
                 var pressmove = false;
                 var ismove = false;
                 var user_stop = true;
+        stage = new createjs.Stage("anime_canvas");//舞台
+        createjs.Touch.enable(stage);//touch设备支持
+        console.log(stage);
 
-                $("body").addEventListener('mousedown', function(e) {
-                    if(ismove) {
-                        if(!pressmove) {
-                            pressmove = true;
-                            user_stop = false;
-                            walk_funky.gotoAndPlay("walk_funky");
-                        }
-                    }
+                stage.addEventListener('mousedown', function(e) {
+                    console.log("a");
+                    timeOutEvent = setTimeout("longPress()",500);
+                    e.preventDefault();
                 }, false);
-                $("body").addEventListener('pressup', function(e) {
-                    if(ismove) {
-                        pressmove = false
-                        user_stop = true;
-                        walk_funky.gotoAndStop("walk_funky");
+                stage.addEventListener('pressup', function(e) {
+                    console.log("b");
+                    clearTimeout(timeOutEvent);
+                    if(time1){
+                        clearInterval(time1);
+                        $(".ship1").css("display","block");
+                        $(".ship2").css("display","none");
                     }
-                }, false);*/
+
+                    if(timeOutEvent!=0){
+                        // alert("你这是点击，不是长按");
+                    }
+                    return false;
+
+                }, false);
 
 
-        $(".btn").on({
+        $(".wrap-ship").on({
             touchstart: function(e){
                 timeOutEvent = setTimeout("longPress()",500);
                 e.preventDefault();
@@ -189,8 +196,33 @@ var timeOutEvent=0;
                 return false;
             }
         })
-    });
+    /*
 
+        var is_play = 1;
+        $(".wrap-ship").on("click",function(e){
+            if(is_play){
+                is_play = 0;
+                timeOutEvent = setTimeout("longPress()",500);
+                e.preventDefault();
+            }else{
+                is_play = 1;
+                clearTimeout(timeOutEvent);
+                if(time1){
+                    clearInterval(time1);
+                    $(".ship1").css("display","block");
+                    $(".ship2").css("display","none");
+                }
+                if(timeOutEvent!=0){
+                    // alert("你这是点击，不是长按");
+                }
+                return false;
+            }
+        });*/
+
+
+
+
+});
     function longPress(){
         timeOutEvent = 0;
 
@@ -198,6 +230,7 @@ var timeOutEvent=0;
             $(".ship1").css("display","none");
             $(".ship2").css("display","block");
             move();
+
         }
         //alert("长按事件触发");
 
