@@ -154,6 +154,7 @@ var timeOutEvent=0;
                 }, false);
                 document.addEventListener('pressup', function(e) {
                     clearTimeout(timeOutEvent);
+					timeOutEvent=0;
                 if(time1){
                     clearInterval(time1);
                     $(".ship1").css("display","block");
