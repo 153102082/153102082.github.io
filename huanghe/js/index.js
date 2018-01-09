@@ -143,13 +143,27 @@ var timeOutEvent=0;
     $(function(){
         preLoadImg();
 
+        /*
+                var pressmove = false;
+                var ismove = false;
+                var user_stop = true;
 
-
-
-
-
-
-
+                $("body").addEventListener('mousedown', function(e) {
+                    if(ismove) {
+                        if(!pressmove) {
+                            pressmove = true;
+                            user_stop = false;
+                            walk_funky.gotoAndPlay("walk_funky");
+                        }
+                    }
+                }, false);
+                $("body").addEventListener('pressup', function(e) {
+                    if(ismove) {
+                        pressmove = false
+                        user_stop = true;
+                        walk_funky.gotoAndStop("walk_funky");
+                    }
+                }, false);*/
 
 
         $("body").on({
@@ -170,7 +184,7 @@ var timeOutEvent=0;
                 }
 
                 if(timeOutEvent!=0){
-                   // alert("你这是点击，不是长按");
+                   alert("你这是点击，不是长按");
                 }
                 return false;
             }
