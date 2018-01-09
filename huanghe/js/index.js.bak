@@ -144,7 +144,7 @@ var timeOutEvent=0;
         preLoadImg();
 
        
-                //var pressmove = false;
+              /*  //var pressmove = false;
                 //var ismove = false;
                 //var user_stop = true;
 
@@ -171,10 +171,10 @@ var timeOutEvent=0;
                 return false;
 
 
-                });
+                });*/
 
 
-         /*$("body").on({
+         $("body").on({
             touchstart: function(e){
                 timeOutEvent = setTimeout("longPress()",500);
                 e.preventDefault();
@@ -196,7 +196,7 @@ var timeOutEvent=0;
                 }
                 return false;
             }
-        })*/
+        })
     });
 
     function longPress(){
@@ -207,7 +207,7 @@ var timeOutEvent=0;
             $(".ship2").css("display","block");
             move();
         }
-        //alert("长按事件触发");
+        alert("长按事件触发");
 
 
     }

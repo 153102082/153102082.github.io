@@ -143,38 +143,30 @@ var timeOutEvent=0;
     $(function(){
         preLoadImg();
 
-       
-              /*  //var pressmove = false;
-                //var ismove = false;
-                //var user_stop = true;
+        /*
+                var pressmove = false;
+                var ismove = false;
+                var user_stop = true;
 
-                body.addEventListener('mousedown', function(e) {
-                     timeOutEvent = setTimeout("longPress()",500);
-                     e.preventDefault();
-                });
-				body.addEventListener('mousemove', function(e) {
-                     clearTimeout(timeOutEvent);
-                     timeOutEvent = 0;
-                });
-                body.addEventListener('pressup', function(e) {
-                 clearTimeout(timeOutEvent);
-					
-                if(time1){
-                    clearInterval(time1);
-                    $(".ship1").css("display","block");
-                    $(".ship2").css("display","none");
-                }
-
-                if(timeOutEvent!=0){
-                   alert("你这是点击，不是长按");
-                }
-                return false;
+                $("body").addEventListener('mousedown', function(e) {
+                    if(ismove) {
+                        if(!pressmove) {
+                            pressmove = true;
+                            user_stop = false;
+                            walk_funky.gotoAndPlay("walk_funky");
+                        }
+                    }
+                }, false);
+                $("body").addEventListener('pressup', function(e) {
+                    if(ismove) {
+                        pressmove = false
+                        user_stop = true;
+                        walk_funky.gotoAndStop("walk_funky");
+                    }
+                }, false);*/
 
 
-                });*/
-
-
-         $("body").on({
+        $(".btn").on({
             touchstart: function(e){
                 timeOutEvent = setTimeout("longPress()",500);
                 e.preventDefault();
@@ -192,7 +184,7 @@ var timeOutEvent=0;
                 }
 
                 if(timeOutEvent!=0){
-                   alert("你这是点击，不是长按");
+                  // alert("你这是点击，不是长按");
                 }
                 return false;
             }
@@ -207,7 +199,7 @@ var timeOutEvent=0;
             $(".ship2").css("display","block");
             move();
         }
-        alert("长按事件触发");
+        //alert("长按事件触发");
 
 
     }

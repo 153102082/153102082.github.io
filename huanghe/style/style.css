@@ -5,6 +5,14 @@ margin:0;
 body .wrap{
     overflow: hidden;
 }
+.btn{
+
+    width:100px;
+    height:50px;
+    background: #f00;
+    position: fixed;
+    z-index: 90;
+}
 .wrap {
     color:#aaadc4;
     width: 100vw;
