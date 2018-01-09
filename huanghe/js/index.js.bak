@@ -148,11 +148,11 @@ var timeOutEvent=0;
                 //var ismove = false;
                 //var user_stop = true;
 
-                document.addEventListener('mousedown', function(e) {
+                $("body").addEventListener('mousedown', function(e) {
                      timeOutEvent = setTimeout("longPress()",500);
                      e.preventDefault();
                 }, false);
-                document.addEventListener('pressup', function(e) {
+                $("body").addEventListener('pressup', function(e) {
                     clearTimeout(timeOutEvent);
                 if(time1){
                     clearInterval(time1);
