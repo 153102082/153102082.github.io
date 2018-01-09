@@ -1,6 +1,9 @@
-
+*{
+    overflow: hidden;
+}
 body ,html{padding: 0;
 margin:0;
+
 }
 body .wrap{
     overflow: hidden;
@@ -55,19 +58,17 @@ body .wrap{
 .wrap-ship{
     position:fixed;
     bottom:-1.5vh;
-    left:100px;
+    left:30px;
     width:130vw;
     height:auto;
     z-index: 5;
 }
 .ship{
 
-    transform: scale(0.4,0.4);
-    -webkit-transform:rotate(-4deg);
-
-    width:60vw;
+    transform: scale(0.8,0.8);
+    width:100vw;
     height:auto;
-    left:-17vw;
+    left:-4vw;
 
 
 
@@ -117,17 +118,28 @@ body .wrap{
     list-style-type: none;
     width:30px;
     float:left;
+    font-size: 18px;
+    font-weight: bold;
 
 }
 
-.text,h1,h2{
+.text{
     font-weight: lighter;
-
     display: block;
     position: absolute;
     z-index:10;
     font-family: 微软雅黑;
+    font-size: 18px;
+    font-weight: bold;
 
+}
+h1,h2{
+
+    font-size: 18px;
+    display: block;
+    z-index:10;
+    font-family: 微软雅黑;
+    font-weight: bold;
 
 }
 .t1{bottom:120vh;  right:30vw;font-size: 18px;}
@@ -138,9 +150,9 @@ body .wrap{
 .t6{bottom:300vh;  right:30vw;font-size: 18px;}
 .t7{bottom:380vh;  right:30vw;font-size: 18px;}
 .t8{bottom:420vh;  right:30vw;font-size: 18px;}
-.t9{bottom:500vh;  right:30vw;font-size: 18px;}
-.t10{bottom:560vh;  right:30vw;font-size: 18px;}
-.t11{bottom:680vh;  right:30vw;font-size: 18px;}
+.t9{bottom:480vh;  right:30vw;font-size: 18px;}
+.t10{bottom:520vh;  right:30vw;font-size: 18px;}
+.t11{bottom:600vh;  right:30vw;font-size: 18px;}
 
 
 

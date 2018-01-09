@@ -20,99 +20,21 @@ function preLoadImg(){
 //$(".audio-button").css("-webkit-animation","jxz 1.5s 0s linear infinite");
 
 var time1=0;
+var time1=2;
 var a=0;
 var b=0;
 function move(){
 
-        time1=setInterval(function () {
-            $(".wrap").css("bottom",a-=10);
-            $(".wrap-ship").css("bottom",b+=10);
+        time2=setInterval(function () {
+            $(".wrap").css("bottom",a-=4);
+            $(".wrap-ship").css("bottom",b+=4);
             console.log($(".wrap").offset().top);
             console.log($(".wrap").css("bottom"));
             console.log($(".wrap-ship").css("left"));
             console.log(-$(".wrap").offset().top/$(".wrap").height());
 
-           if( $(".wrap").offset().top>$(".wrap").height()*0.837){
-               //$(".ship").css("left","");
-            }else if(- $(".wrap").offset().top> $(".wrap").height()*0.71){
-
-            }else if(- $(".wrap").offset().top> $(".wrap").height()*0.667){
-
-
-
-
-                $(".wrap-ship").css("left","-60");
-
-            }else if(- $(".wrap").offset().top> $(".wrap").height()*0.6){
-
-                $(".ship").css("-webkit-transform","rotate(0deg)");
-                $(".wrap-ship").css("left","-50px");
-
-            }
-            else if(- $(".wrap").offset().top> $(".wrap").height()*0.55){
-
-                $(".ship").css("-webkit-transform","rotate(0deg)");
-                $(".wrap-ship").css("left","-34px");
-
-            }
-            else if(- $(".wrap").offset().top> $(".wrap").height()*0.517){
-
-                $(".ship").css("-webkit-transform","rotate(0deg)");
-                $(".wrap-ship").css("left","-28px");
-
-            }
-            else if(- $(".wrap").offset().top> $(".wrap").height()*0.4){
-
-                $(".ship").css("-webkit-transform","rotate(-6deg)");
-                $(".wrap-ship").css("left","-28px");
-
-            }
-            else if(- $(".wrap").offset().top> $(".wrap").height()*0.36){
-
-                $(".ship").css("-webkit-transform","rotate(12deg)");
-                $(".wrap-ship").css("left","-60px");
-
-            }
-            else if(- $(".wrap").offset().top> $(".wrap").height()*0.3){
-
-                $(".ship").css("-webkit-transform","rotate(-7deg)");
-                $(".wrap-ship").css("left","-70px");
-
-            } else if(- $(".wrap").offset().top> $(".wrap").height()*0.28){
-
-                $(".ship").css("-webkit-transform","rotate(0deg)");
-                $(".wrap-ship").css("left","-75px");
-
-            }else if(- $(".wrap").offset().top> $(".wrap").height()*0.19){
-
-                $(".ship").css("-webkit-transform","rotate(0deg)");
-                $(".wrap-ship").css("left","-60px");
-
-            }
-            else if(- $(".wrap").offset().top> $(".wrap").height()*0.14){
-
-                $(".ship").css("-webkit-transform","rotate(7deg)");
-                $(".wrap-ship").css("left","-20px");
-
-            }
-            else if(- $(".wrap").offset().top> $(".wrap").height()*0.12){
-
-                $(".ship").css("-webkit-transform","rotate(-14deg)");
-                $(".wrap-ship").css("left","-10px");
-               //$(".wrap-ship").css("left","-800px");
-            }
-            else if(- $(".wrap").offset().top> $(".wrap").height()*0.08){
-
-            //   $(".ship").css("-webkit-transform","rotate(-14deg)");
-              // $(".wrap-ship").css("left","0px");
-               //$(".wrap-ship").css("left","-800px");
-           }
-            else{
-               $(".wrap-ship").css("left","0px");
-               $(".wrap-ship").css("top","100vh");
-           }
             if( $(".wrap").offset().top>=-80){
-                clearInterval(time1);
+                clearInterval(time2);
             }
         },100);
 
@@ -130,6 +52,7 @@ function move(){
             $(".wrap").css("display","block");
             $(".wrap-ship").css("display","block");
             $(".loading").css("display","none");
+            move();
 
 
         }
@@ -173,8 +96,8 @@ var timeOutEvent=0;
                 }
                 return false;
             }
-        })
-    /*
+        })/**/
+
 
         var is_play = 1;
         $(".wrap-ship").on("click",function(e){
@@ -195,28 +118,22 @@ var timeOutEvent=0;
                 }
                 return false;
             }
-        });*/
-
-
+        }); /**/
 
 
 });
-    function longPress(){
-        timeOutEvent = 0;
 
-        if( $(".wrap").offset().top<=-80){
-            $(".ship1").css("display","none");
-            $(".ship2").css("display","block");
-            move();
+  function longPress(){
+      timeOutEvent = 0;
 
-        }
-        //alert("长按事件触发");
+      if( $(".wrap").offset().top<=-80){
+          $(".ship1").css("display","none");
+          $(".ship2").css("display","block");
+          move();
 
-
-    }
-
-
-
+      }
+      //alert("长按事件触发");
+  }/**/
 
 /*
                var pressmove = false;
