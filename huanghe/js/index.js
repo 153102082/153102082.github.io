@@ -144,17 +144,21 @@ var timeOutEvent=0;
         preLoadImg();
 
        
-                //var pressmove = false;
+              /*  //var pressmove = false;
                 //var ismove = false;
                 //var user_stop = true;
 
-                document.addEventListener('mousedown', function(e) {
+                body.addEventListener('mousedown', function(e) {
                      timeOutEvent = setTimeout("longPress()",500);
                      e.preventDefault();
-                }, false);
-                document.addEventListener('pressup', function(e) {
-                    clearTimeout(timeOutEvent);
-					timeOutEvent=0;
+                });
+				body.addEventListener('mousemove', function(e) {
+                     clearTimeout(timeOutEvent);
+                     timeOutEvent = 0;
+                });
+                body.addEventListener('pressup', function(e) {
+                 clearTimeout(timeOutEvent);
+					
                 if(time1){
                     clearInterval(time1);
                     $(".ship1").css("display","block");
@@ -167,10 +171,10 @@ var timeOutEvent=0;
                 return false;
 
 
-                }, false);
+                });*/
 
 
-         /*$("body").on({
+         $("body").on({
             touchstart: function(e){
                 timeOutEvent = setTimeout("longPress()",500);
                 e.preventDefault();
@@ -192,7 +196,7 @@ var timeOutEvent=0;
                 }
                 return false;
             }
-        })*/
+        })
     });
 
     function longPress(){
@@ -203,7 +207,7 @@ var timeOutEvent=0;
             $(".ship2").css("display","block");
             move();
         }
-        //alert("长按事件触发");
+        alert("长按事件触发");
 
 
     }
