@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,minimum-scale=0.3,maximum-scale=2,user-scalable=no" />
+    <title>Title</title>
+
+    <style>
+        body{margin: 0;padding: 0;width:100vw;height:100vh;}
+        .bg{overflow:hidden;width:100%;height:725%;background: url("bg1.jpg") no-repeat;background-size: 100% auto;position:absolute;}
+        .xl{
+            animation: xl 15s linear 0s infinite ;
+            margin-left:18vw;width:110vw;height:66vh;background: url("img/img-15.gif") no-repeat;background-size: 100% auto;
+        }
+        .t11{font-size:1vh;padding:10vh 25vw}
+        @keyframes xl {
+            0%{margin-left:18vw;}
+            50%{margin-left:38vw;}
+            100%{margin-left:18vw;}
+        }
+
+
+        .fly{animation: fly 5s linear 2s infinite  ;
+            margin-left:-50vw; width:60vw;height:15vh;background: url("img/img-14.png") no-repeat;background-size: 100% auto;
+        }
+        @keyframes fly {
+
+            0%{margin-left:-50vw;}
+            100%{margin-left:100vw;}
+        }
+        .sun{
+          float:right; width:50vw;height:18vh;background: url("img/img-13.gif") no-repeat;background-size: 100% auto;
+          clear: both;
+        }
+
+        h2{
+            font-size: 16px;
+            font-weight: bold;
+            color:#fff;
+        }
+        .wenzi li{
+            list-style-type: none;
+            width:24px;
+            float:left;
+            font-size: 20px;
+            font-weight: bold;
+            color:#fff;
+        }
+        .clearfix{
+            content:"  ";
+            display: block;
+            width:100%;
+           height:0;
+            line-height: 0;
+            clear: both;
+            zoom:1;
+        }
+        .valley{
+
+            clear: both;
+            margin-top: -15vh;
+            animation: valley 2s linear 2s  infinite  ;
+            margin-left: -10vw;
+             width:88vw;height:28vh;background: url("img/img-12.png") no-repeat;background-size: 100% auto;
+             background-position: bottom;
+        }
+        .t10{margin-left: 30vw;}
+        @keyframes valley {
+            0%{transform: scale(1,1)}
+            50%{transform: scale(0.9,1.1)}
+            100%{transform: scale(1,1)}
+        }
+        .yl{
+            float:right; width:40vw;height:18vh;background: url("img/d4.gif") no-repeat;background-size: 100% auto;
+            clear: both;
+        }
+        .heaven{
+            animation: heaven 4s linear 2s  infinite;
+
+            float:right; width:80vw;height:60vh;background: url("img/img-11.gif") no-repeat;background-size: 100% auto;
+            clear: both;
+            background-position: bottom;
+        }
+        .t9{padding:40vh 20vw; }
+        @keyframes heaven {
+            0%{margin-right:0vw;}
+            50%{margin-right:-4vw;}
+            100%{margin-right:-0vw;}
+        }
+
+
+
+    </style>
+    <script src="js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+<div class="bg">
+
+    <!--<div class="xl">-->
+        <!--<div class="text t11"><h2>这是统万城，我们匈奴人</h2><h2>留下的唯一一座都城遗址。</h2>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="fly"></div>-->
+    <!--<div class="sun "></div>-->
+    <!--<div class="clearfix"></div>-->
+    <!--<div>-->
+        <!--<div class=" wenzi text t10">-->
+            <!--<li>靖边波浪谷</li>-->
+            <!--<li>时光流动的指纹</li>-->
+        <!--</div>-->
+        <!--<div class="valley ">-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="yl"></div>-->
+    <!--<div class="heaven">-->
+        <!--<div class="text t9"><h2>天地造化乾坤湾</h2>-->
+            <!--<h2>羲皇推演太极图</h2>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+</div>
+<script src="js/bg.js"></script>
+</body>
+</html>

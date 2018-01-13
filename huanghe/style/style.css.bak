@@ -1,0 +1,196 @@
+*{
+    overflow: hidden;
+}
+body ,html{padding: 0;
+margin:0;
+
+}
+body .wrap{
+    overflow: hidden;
+
+}
+
+.wrap {
+    color:#ccc;
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    overflow: auto;
+    left: 50%;
+    transform: translate(-50%,0);
+    bottom: 0;
+    background: url("../img/bg.jpg") center no-repeat;
+    background-size: 100% auto;
+
+}
+
+.last a{
+    text-decoration: none;
+    position: absolute;
+    display: block;
+    animation: cfont 1.5s linear 0s infinite;
+
+    color:#fff;
+    font-size:5vw;
+    left:24vw;
+    bottom:10vh;
+
+}
+
+.last-bg{
+    text-align: center;
+    position: relative;
+}
+
+.loading ,.last{
+
+    width:100vw;
+    height:100vh;
+
+    margin:0 auto;
+}
+.last-bg{  background: url("../img/last.jpg") center no-repeat;  }
+.l1{ background: url("../img/updown/1.jpg") center no-repeat;  }
+.l2{ background: url("../img/updown/2.jpg") center no-repeat;  }
+.l3{ background: url("../img/updown/3.jpg") center no-repeat;  }
+.l4{ background: url("../img/updown/4.jpg") center no-repeat;  }
+.l5{ background: url("../img/updown/5.jpg") center no-repeat;  }
+.l6{ background: url("../img/updown/6.jpg") center no-repeat;  }
+.l7{ background: url("../img/updown/7.jpg") center no-repeat;  }
+.l8{ background: url("../img/updown/8.jpg") center no-repeat;  }
+.l9{ background: url("../img/updown/9.jpg") center no-repeat;  }
+.l10{ background: url("../img/updown/10.jpg") center no-repeat;  }
+.l11{ background: url("../img/updown/11.jpg") center no-repeat;  }
+.l12{ background: url("../img/updown/12.jpg") center no-repeat;  }
+.l13{ background: url("../img/updown/13.jpg") center no-repeat;  }
+.l14{ background: url("../img/updown/14.jpg") center no-repeat;  }
+.gril,.last-bg{
+    width:100%;
+    height:100%;
+    background-size: 100% 100%;
+}
+.bg-img {
+    width: 100vw;
+    height: auto;
+    z-index: -10;
+
+
+}
+.wrap-ship{
+    position:fixed;
+    bottom:-1.5vh;
+    left:30px;
+    width:130vw;
+    height:auto;
+    z-index: 5;
+}
+.ship{
+
+    transform: scale(0.5,0.5);
+    width:100vw;
+    height:auto;
+    left:-4vw;
+
+
+
+}
+.content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -50vw;
+    bottom: 0px;
+    z-index: 2;
+
+}
+.imgs{
+    display: block;
+    position: absolute;
+    z-index:10;
+
+}
+
+.yanhuua{ bottom:15vh;  left:0;}
+.d1{  bottom:37vh;  left:0; width: 40vw;}
+.img-1{  bottom:70vh;  right:0;width:100vw ;}
+.img-2{  bottom:110vh;  left:-10vw; width:90vw; }
+.t1{bottom:130vh;  right:40vw;font-size: 10px;}
+.img-3{  bottom:160vh;  right:0; width:50vw;}
+.t2{bottom:190vh;  right:40vw;font-size: 10px;}
+.img-4{  bottom:210vh;  left:0vw;  width:30vw; }
+.t3{bottom:240vh;  right:50vw;font-size: 10px;}
+.img-5{  bottom:280vh;  left:20vw;width:100vw; }
+.t4{bottom:284vh;  right:20vw;font-size: 10px;}
+.d2{  bottom:320vh;  right:0; width:30vw;}
+
+.img-6{  bottom:330vh;  left:-20vw;width:100vw; }
+.t5{bottom:380vh;  left:10vw;font-size: 10px;}
+.img-7{  bottom:390vh;  left:50vw;width:40vw; }
+.t6{bottom:395vh;  right:40vw;font-size: 10px;}
+.d3{  bottom:440vh;  left:-8vw; width:30vw;}
+.img-8{  bottom:450vh;  right:-10vw;width:90vw; }
+.t7{bottom:440vh;  right:30vw;font-size: 10px;}
+
+.img-9{  bottom:510vh;  left:0vw;width:30vw; }
+.t8{bottom:510vh;  left:40vw;font-size: 10px;}
+
+.img-10{  bottom:540vh; left:40vw; width:40vw}
+
+.img-11{  bottom:577vh; left:30vw;width:80vw; }
+.t9{bottom:590vh;  right:15vw;font-size: 10px;}
+
+.d4{  bottom:640vh;  right:0; width:30vw;}
+.img-12{  bottom:650vh;  left:0;width:60vw; }
+.t10{bottom:670vh;  right:60vw;font-size: 10px;}
+
+.img-13{  bottom:690vh;  right:0vw;  width:50vw;}
+
+.img-14{  bottom:720vh;  left:0; width: 50vw;}
+.img-15{  bottom:770vh;  right:-20vw; width:100vw;}
+.t11{bottom:810vh;  right:8vw;font-size: 10px;}
+
+
+.wenzi li{
+    list-style-type: none;
+    width:20px;
+    float:left;
+    font-size: 10px;
+    font-weight: bold;
+
+}
+
+.text{
+    font-weight: lighter;
+    display: block;
+    position: absolute;
+    z-index:10;
+    font-family: 微软雅黑;
+    font-size: 10px;
+    font-weight: bold;
+
+}
+h1,h2{
+
+    font-size: 10px;
+    display: block;
+    z-index:10;
+    font-family: 微软雅黑;
+    font-weight: bold;
+
+}
+
+
+
+@-webkit-keyframes cfont {
+   0%{
+    font-size:5vw;
+
+    }
+    50%{
+        font-size:6vw;
+    }
+    100%{
+    font-size:5vw;
+    }
+}
