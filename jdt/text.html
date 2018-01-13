@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://www.h5-share.com/test/easeljsdemo/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+</head>
+<!----> 
+<body >
+	<canvas id="myCanvas" width="313" height="195"> 
+  easeljs的动画简单使用
+</canvas>
+
+<!-- 推荐开源CDN来选取需引用的外部JS //-->
+<script src="http://cdn.gbtags.com/EaselJS/0.7.1/easeljs.min.js"></script>
+<script>
+
+
+window.onload=function(){
+
+  var canvas = document.getElementById("myCanvas"),
+    stage = new createjs.Stage(canvas);
+var img =new Image(); 
+img.src = 'http://www.igeekbar.com/igeekbar/networks/uploadimgthumb/7a59e1d8-ac16-47d7-a642-fd626cbf3efe.jpg';
+    img.onload =function(){  
+        
+
+ 
+
+
+
+
+    }  
+       
+  function setup() {
+      var spritesheet = new createjs.SpriteSheet({
+              "images": ['http://www.igeekbar.com/igeekbar/networks/uploadimgthumb/7a59e1d8-ac16-47d7-a642-fd626cbf3efe.jpg'],
+              "frames": {"height": 194, "count": 11, "width": 313},
+              "animations": { run: [0,10]}
+          });
+          
+      var character = new createjs.Sprite(spritesheet, "run");
+      character.framerate = 11; 
+      character.play();//播放动画
+      stage.addChild(character);
+
+      createjs.Ticker.addEventListener("tick", tick);
+}
+  function tick(event) {
+      stage.update();
+  }
+  
+
+
+ setup();
+   
+
+}
+
+
+</script>
+
+	
+
+
+</body></html>

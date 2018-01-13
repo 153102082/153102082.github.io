@@ -6,11 +6,15 @@ function preLoadImg(){
     $.imgpreload(images,{
         each: function () {
             var status = $(this).data('loaded') ? 'success' : 'error';
+<<<<<<< HEAD
             if (status == "success") {
 			imgNum++;
 			$(".jd").html(parseInt(imgNum/images.length*100)+"%");
 			console.log(imgNum/images.length);
 			}
+=======
+            if (status == "success") {}
+>>>>>>> d4cd529ff589f6a9691d84a33b5cc5e0441e103f
         },
         all:function(){
 
@@ -24,10 +28,18 @@ function preLoadImg(){
 //$(".audio-button").css("-webkit-animation","jxz 1.5s 0s linear infinite");
 
 var time1=0;
+<<<<<<< HEAD
 var time2=0;
 var a=0;
 var b=0;
 function move(){
+=======
+var time1=2;
+var a=0;
+var b=0;
+function move(){
+
+>>>>>>> d4cd529ff589f6a9691d84a33b5cc5e0441e103f
         time2=setInterval(function () {
             $(".wrap").css("bottom",a-=4);
             $(".wrap-ship").css("bottom",b+=4);
@@ -36,6 +48,7 @@ function move(){
             console.log($(".wrap-ship").css("left"));
             console.log(-$(".wrap").offset().top/$(".wrap").height());
 
+<<<<<<< HEAD
             if( $(".wrap").offset().top>=0){
 
                 clearInterval(time2);
@@ -46,11 +59,19 @@ function move(){
 
                 },5000);
 
+=======
+            if( $(".wrap").offset().top>=-80){
+                clearInterval(time2);
+>>>>>>> d4cd529ff589f6a9691d84a33b5cc5e0441e103f
             }
         },100);
 
     }
    function jump(){
+<<<<<<< HEAD
+=======
+
+>>>>>>> d4cd529ff589f6a9691d84a33b5cc5e0441e103f
     var i=0;
     var time2=setInterval(function () {
 
@@ -63,6 +84,7 @@ function move(){
             $(".wrap-ship").css("display","block");
             $(".loading").css("display","none");
             move();
+<<<<<<< HEAD
         }
     },200);
   }
@@ -74,6 +96,22 @@ var timeOutEvent=0;
         $(".tz").on("touchstart",function(){
             window.location.href="http://huanghe.sxtour.com/";
         });
+=======
+
+
+        }
+    },100);
+
+
+  }
+var stage='';
+
+var timeOutEvent=0;
+    $(function(){
+        preLoadImg();
+
+
+>>>>>>> d4cd529ff589f6a9691d84a33b5cc5e0441e103f
         $("body").on({
             touchstart: function(e){
                 e.preventDefault();
@@ -81,8 +119,12 @@ var timeOutEvent=0;
         });
 
 
+<<<<<<< HEAD
         /**/
         $("body").on({
+=======
+        $(".wrap-ship").on({
+>>>>>>> d4cd529ff589f6a9691d84a33b5cc5e0441e103f
             touchstart: function(e){
                 timeOutEvent = setTimeout("longPress()",500);
                 e.preventDefault();
@@ -108,7 +150,11 @@ var timeOutEvent=0;
 
 
         var is_play = 1;
+<<<<<<< HEAD
        /* $(".wrap-ship").on("click",function(e){
+=======
+        $(".wrap-ship").on("click",function(e){
+>>>>>>> d4cd529ff589f6a9691d84a33b5cc5e0441e103f
             if(is_play){
                 is_play = 0;
                 timeOutEvent = setTimeout("longPress()",500);
@@ -126,7 +172,11 @@ var timeOutEvent=0;
                 }
                 return false;
             }
+<<<<<<< HEAD
         }); */
+=======
+        }); /**/
+>>>>>>> d4cd529ff589f6a9691d84a33b5cc5e0441e103f
 
 
 });
@@ -144,8 +194,11 @@ var timeOutEvent=0;
   }/**/
 
 /*
+<<<<<<< HEAD
 
                 var stage='';
+=======
+>>>>>>> d4cd529ff589f6a9691d84a33b5cc5e0441e103f
                var pressmove = false;
                var ismove = false;
                var user_stop = true;
