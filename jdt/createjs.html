@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=750,minimum-scale=0.3,maximum-scale=2,user-scalable=no">
+    <style>
+        body{background:#111;}
+        canvas{width:100%;background: #fff;}
+
+    </style>
+    <title>Title</title>
+
+    <script src="js/easeljs-0.8.2.min.js"></script>
+
+</head>
+<body>
+<canvas id="canvas" width="750" height="700"></canvas>
+<script>
+    var canvas=document.querySelector("#canvas");
+    var stage=new createjs.Stage(canvas);
+    var rect=new createjs.Shape();
+    rect.graphics.beginFill("#ff0").drawRect(0,30,500,100);
+    stage.addChild(rect);
+    var rect1=new createjs.Shape();
+    rect1.graphics.beginFill("#f00").drawRect(20,0,400,100);
+    stage.addChild(rect1);
+    createjs.Ticker.setFPS(60);
+    stage.setChildIndex(rect,-1);
+    stage.setChildIndex(rect1,-2);
+    var img = new Image();
+    img.src = 'images/hill1.png';
+    img.onload = function () {
+        var bg = new createjs.Bitmap("images/hill1.png");
+        bg.x = 0;
+        bg.y = 0;
+        stage.addChild(bg);
+        stage.setChildIndex(bg, -4);
+
+        shape = new createjs.Shape();
+        shape.graphics.beginFill("#fff").drawCircle(0, 0, 100);
+        shape.x = 180;
+        shape.y = 0;
+      // bg.mask = shape;     //给图片bg添加遮罩
+        stage.addChild(shape);
+        stage.addChild(bg);
+        stage.update();
+
+        var rect = new createjs.Rectangle(0, 20, 200, 110);
+        bg.sourceRect = rect;
+        stage.addChild(bg);
+        stage.update();
+        createjs.Touch.enable(stage);
+        bg.addEventListener('click',function(){
+
+        alert("www") });
+        createjs.Ticker.timingMode = createjs.Ticker.RAF;
+
+
+    }
+
+//    var contain = new createjs.Container();
+//    contain.addChild(bgImg);
+//    contain.addChild(bitmap);
+//    stage.addChild(contain);
+    var txt;
+    var count = 0;
+    txt = new createjs.Text("Hello CNBlogs->", "40px Arial", "#ff7700");
+    txt.x=60;
+    txt.y=300;
+    stage.setChildIndex(txt, -4);
+    stage.addChild(txt);
+    window.onload = function () {
+        createjs.Ticker.addEventListener("tick", tick);
+        stage.addEventListener("stagemousedown", clickCanvas);
+        stage.addEventListener("stagemousemove", moveCanvas);
+        createjs.Touch.enable(stage);
+        var data = {
+            images: ["images/ground.png"],
+            frames: { width: 200, height: 200, regX: 10, regY: 10 }
+        }
+
+        sprite = new createjs.Sprite(new createjs.SpriteSheet(data));
+        createjs.Ticker.setFPS(20);
+
+
+    }
+
+
+
+
+
+
+
+    var a=1;
+
+
+    function clickCanvas(){
+      //alert("click1")  ;
+    };
+    function moveCanvas(){
+        //alert("move1")  ;
+    };
+
+    function tick(e)
+    {
+        count++;
+        txt.text = "Hello CNBlogs->" + count + "☺";
+        rect.x+=a;
+        if(rect.x<10){
+        a=1;}
+        if(rect.x>90){
+           a=-1;
+        }
+
+
+        // 每做一次操作，需要对舞台一次更新
+        stage.update(e);
+
+
+
+
+
+
+    }
+
+</script>
+</body>
+</html>

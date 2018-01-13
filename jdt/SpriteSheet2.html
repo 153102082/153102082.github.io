@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">
+	<meta name="format-detection" content="telephone=no">
+	<title>SpriteSheet2</title>
+	<link href="style/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body >
+	<div class="wrap undefined">
+		<canvas id="testCanvas" width="750" height="312.5"></canvas>
+	</div>
+	<!--<script src="js/examples.js"></script>-->
+	<script src="js/preloadjs-0.6.2.min.js"></script>
+	<script src="js/easeljs-0.8.2.min.js"></script>
+	<script id="editable">
+	var stage, w, h, loader;
+	var sky, grant, ground, hill, hill2;
+
+	function init() {
+
+
+        var testCanvas=document.querySelector("#testCanvas");
+		stage = new createjs.Stage("testCanvas");
+		w = stage.canvas.width;
+		h = stage.canvas.height;
+
+
+		manifest = [
+			{src: "spritesheet_grant.png", id: "grant"},
+			{src: "sky.png", id: "sky"},
+			{src: "ground.png", id: "ground"},
+			{src: "hill1.png", id: "hill"},
+			{src: "hill2.png", id: "hill2"},
+            {src: "daren_walk.png", id: "walk"}
+		];
+
+		loader = new createjs.LoadQueue(false);
+		loader.addEventListener("complete", handleComplete);
+
+        var txt;
+
+        txt = new createjs.Text("0%", "40px Arial", "#ff7700");
+        txt.x=60;
+        txt.y=100;
+
+        stage.addChild(txt);
+
+        loader.on("fileload", function(e) {
+
+
+            txt.text = Math.floor(loader.progress * 100) + "%";
+
+            stage.update(e);
+
+        }, this);
+		loader.loadManifest(manifest, true, "images/");
+	}
+
+
+
+
+
+
+
+	function handleComplete() {
+	   // alert("a");
+		sky = new createjs.Shape();
+		sky.graphics.beginBitmapFill(loader.getResult("sky")).drawRect(0, 0, w, h);
+
+		var groundImg = loader.getResult("ground");
+		ground = new createjs.Shape();
+		ground.graphics.beginBitmapFill(groundImg).drawRect(0, 0, w + groundImg.width, groundImg.height);
+		ground.tileW = groundImg.width;
+		ground.y = h - groundImg.height;
+
+		hill = new createjs.Bitmap(loader.getResult("hill"));
+		hill.setTransform(Math.random() * w, h - hill.image.height * 4 - groundImg.height, 4, 4);
+		hill.alpha = 0.5;
+
+		hill2 = new createjs.Bitmap(loader.getResult("hill2"));
+		hill2.setTransform(Math.random() * w, h - hill2.image.height * 3 - groundImg.height, 3, 3);
+
+		var spriteSheet = new createjs.SpriteSheet({
+				framerate: 30,
+				"images": [loader.getResult("grant")],
+				"frames": {"regX": 82, "height": 292, "count": 64, "regY": 0, "width": 165},
+				"animations": {
+					"run": [0, 25, "run", 1.5],
+					"jump": [26, 63, "run"]
+				}
+			});
+		grant = new createjs.Sprite(spriteSheet, "run");
+		grant.y = 35;
+
+		stage.addChild(sky, hill, hill2, ground, grant);
+		stage.addEventListener("stagemousedown", handleJumpStart);
+		createjs.Ticker.timingMode = createjs.Ticker.RAF;
+		createjs.Ticker.addEventListener("tick", tick);
+	}
+
+	function handleJumpStart() {
+		grant.gotoAndPlay("jump");
+	}
+
+	function tick(event) {
+		var deltaS = event.delta / 1000;
+		var position = grant.x + 150 * deltaS;
+
+		var grantW = grant.getBounds().width * grant.scaleX;
+		grant.x = (position >= w + grantW) ? -grantW : position;
+
+		ground.x = (ground.x - deltaS * 150) % ground.tileW;
+		hill.x = (hill.x - deltaS * 30);
+		if (hill.x + hill.image.width * hill.scaleX <= 0) {
+			hill.x = w;
+		}
+		hill2.x = (hill2.x - deltaS * 45);
+		if (hill2.x + hill2.image.width * hill2.scaleX <= 0) {
+			hill2.x = w;
+		}
+
+		stage.update(event);
+	}/**/
+
+
+    window.addEventListener('load',init,false);
+	</script>
+
+
+</body></html>
