@@ -1,0 +1,47 @@
+*{margin:0;padding:0;}
+body{background-color:#fff;}
+.top{height:30px;background-color:#f5f5f5;}
+.header{height:92px;}
+.nav{height:36px;background-color:#61f10f;}
+.banner{height:414px;width:802px;margin:0 auto; padding:9px 0 0 198px;}
+.content{height:490px; padding:10px 0 38px 0;}
+.footer{height:70px;background-color:#eceef2; }
+.go-top{display: block;position:fixed;right:2px;bottom:2px;width:40px;height:40px;color:#fff;background:rgb(120,120,120) url(../img/icon-go-up.png) center no-repeat;}
+.wrap{width:1000px;margin:0 auto;position:relative;}
+.clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+    zoom: 1;
+}
+.banner-slider{
+    float:left;
+    width:544px;
+    height:414px;
+    background-color:#8edff3;
+
+
+}
+.content-tab{
+    float:left;
+    width:742px;
+    height:490px;
+
+}
+.content-close,.content-news{
+    float:right;
+    width:248px;
+    height:236px;
+    border:1px solid #eee;
+}
+.content-close{
+    margin-top:12px;
+}
+.footer{
+    line-height: 70px;
+    text-align: center;
+    font-size: 12px;
+    color:#acacac;
+}

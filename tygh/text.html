@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <style>
+.container{
+    width:200px;
+    height:100px;
+    background:#666;
+    position:relative;
+    padding:30px;
+    z-index:2;
+
+}
+        .child{
+            width:150px;
+            height:80px;
+            position: absolute;
+            background:#00b3ea;
+            top:0;
+            left:0;
+
+        }
+    </style>
+    <div class="child">
+        <a href="#">凤凰网1</a>
+        <a href="#">凤凰网2</a>
+        <a href="#">凤凰网3</a>
+        <a href="#">凤凰网4</a>
+    </div>
+</div>
+<script src="js/jquery-1.7.1.min.js"></script>
+<script>
+    $(function(){
+        $("a").bind("click",function(){
+           alert($(this).html());
+        });
+        //$("a").trigger("click");
+        $("a").triggerHandler("click");
+
+    })
+</script>
+</body>
+</html>
