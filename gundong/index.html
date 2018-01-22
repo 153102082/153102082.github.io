@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="width=640px, maximum-scale=1.0, user-scalable=no, target-densitydpi=320">
+
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="Resource-type" content="Document">
+
+
+    <title>黄河</title>
+	<style>
+	*{margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    }
+	body{
+    background: #f9f9f9;
+    color: #555;
+    font: normal 24px/1.5 tahoma, "Microsoft YaHei","Arial Unicode MS",Mingliu,Arial,Helvetica;
+    height: 100%;
+   }
+	.pbody{
+
+    margin: 0 auto;
+    height: 100%;
+    width: 640px;
+}
+#demo {
+    overflow: scroll;
+    width: 640px;
+	height:100vh;
+}
+#demo::-webkit-scrollbar {
+    display: none;
+}
+
+	</style>
+
+</head>
+<body>
+
+<div class="pbody">
+<div id="demo" >
+     
+     <div  id="demo1"  >
+    <img class="bg-img" src="bg1.jpg" style="width:640px; height:auto"/>
+	</div>
+	
+</div>
+</div>
+<script>
+var speed=20; //数字越大速度越慢
+var demo=document.getElementById("demo");
+var demo1=document.getElementById("demo1");
+//var demo2=document.getElementById("demo2");
+//demo2.innerHTML=demo1.innerHTML;
+//滚动消息
+demo.scrollTop=demo1.offsetHeight;
+function Marquee(){
+if(demo.scrollTop<=0)
+demo.scrollTop=demo1.offsetHeight;
+else{
+demo.scrollTop-=10; 
+    //console.log(demo2.offsetWidth);
+    console.log(demo.scrollTop);
+   console.log(demo1.offsetHeight);
+}
+}
+var MyMar=setInterval(Marquee,speed);
+//demo.onmouseover=function() {clearInterval(MyMar)};
+//demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+var move=1;
+
+demo.addEventListener("touchend", function(){
+	if(move==1){clearInterval(MyMar);move=0} else{
+	
+	MyMar=setInterval(Marquee,speed);move=1
+	}
+    
+});  
+ 
+</script>
+</body>
+</html>
